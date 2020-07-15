@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { FormGroup, FormArray } from '@angular/forms';
+import { FormGroup, FormArray, FormBuilder } from '@angular/forms';
 import { TeamFormService } from './team-form.service';
 import { Subscription } from 'rxjs';
 
@@ -14,14 +14,17 @@ export class TeamComponent implements OnInit, OnDestroy {
   formInvalid = false;
   players: FormArray;
 
-  constructor(private teamFormService: TeamFormService) { }
+  constructor(private teamFormService: TeamFormService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.teamFormSub = this.teamFormService.teamForm$
+   /* this.teamFormSub = this.teamFormService.teamForm$
       .subscribe(team => {
           this.teamForm = team;
           this.players = this.teamForm.get('players') as FormArray;
-        });
+        });*/
+
+    this.teamForm = this.teamFormService.form;
+    this.players = this.teamFormService.players;
   }
 
   ngOnDestroy(): void  {

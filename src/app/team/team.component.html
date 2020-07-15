@@ -9,8 +9,11 @@
     </li>
   </ul>
 
-  <button  type="submit" mat-raised-button color="accent" (click)="saveTeam()" [disabled]="teamForm.invalid">Submit</button>
-  <pre>Parent Form Status: <span class="status">{{teamForm.status}}</span></pre>
+  <div *ngIf="teamForm" >
+    <button type="submit" mat-raised-button color="accent" (click)="saveTeam()" [disabled]="teamForm.invalid">Submit</button>
+    <pre>Parent Form Status: <span class="status">{{teamForm.status}}</span></pre>
+  </div>
+
 </form>
 
 

@@ -10,11 +10,18 @@ export class TeamFormService {
     this.fb.group(new TeamForm(new Team('Cavaliers'))));
   teamForm$: Observable<FormGroup> = this.teamForm.asObservable();
 
-  constructor(private fb: FormBuilder) {}
+  public form;
+  public players;
+
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group(new TeamForm(new Team('Cavaliers')));
+    this.players = this.form.get('players') as FormArray;
+  }
+
 
   addPlayer(): void {
-    const currentTeam = this.teamForm.getValue();
-    const currentPlayers = currentTeam.get('players') as FormArray;
+    // const currentTeam = this.teamForm.getValue();
+    const currentPlayers = this.form.get('players') as FormArray;
 
     currentPlayers.push(
       this.fb.group(
@@ -22,15 +29,15 @@ export class TeamFormService {
       )
     );
 
-    this.teamForm.next(currentTeam);
+    // this.teamForm.next(currentTeam);
   }
 
   deletePlayer(i: number): void {
-    const currentTeam = this.teamForm.getValue();
-    const currentPlayers = currentTeam.get('players') as FormArray;
+    //const currentTeam = this.teamForm.getValue();
+    //const currentPlayers = currentTeam.get('players') as FormArray;
 
-    currentPlayers.removeAt(i);
+    //currentPlayers.removeAt(i);
 
-    this.teamForm.next(currentTeam);
+    //this.teamForm.next(currentTeam);
   }
 }
