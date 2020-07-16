@@ -1,4 +1,4 @@
-import { Player } from '../player/_models/player.model'
+import { Player } from '../player';
 
 export class Team {
     name: string;

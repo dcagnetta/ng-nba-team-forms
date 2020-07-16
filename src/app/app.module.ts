@@ -13,12 +13,24 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { TeamFormComponent } from './ngx-sub-form/team-form/team-form.component';
+import { PlayersFormComponent } from './ngx-sub-form/players-form/players-form.component';
+import { PlayerFormComponent } from './ngx-sub-form/player-form/player-form.component';
+import { MatIconModule } from '@angular/material/icon';
+import { NbaTeamContainerComponent } from './ngx-sub-form/nba-team-container/nba-team-container.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    // ng form builder
     TeamComponent,
-    PlayerComponent
+    PlayerComponent,
+
+    // ngx-sub-form
+    TeamFormComponent,
+    PlayersFormComponent,
+    PlayerFormComponent,
+    NbaTeamContainerComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +41,7 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatIconModule,
     MatDividerModule,
     MatListModule
   ],

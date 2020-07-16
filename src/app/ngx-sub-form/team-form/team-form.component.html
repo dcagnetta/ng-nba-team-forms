@@ -1,0 +1,20 @@
+<fieldset [formGroup]="formGroup" class="container">
+  <legend>Team form</legend>
+
+  <mat-form-field>
+    <input
+      matInput
+      data-input-name
+      type="text"
+      placeholder="Name"
+      [formControlName]="formControlNames.name"
+      autocomplete="off"
+    />
+  </mat-form-field>
+
+  <ngx-sub-players-form [formControlName]="formControlNames.players"></ngx-sub-players-form>
+
+</fieldset>
+
+
+<pre>{{ formGroupValues | json }}</pre>

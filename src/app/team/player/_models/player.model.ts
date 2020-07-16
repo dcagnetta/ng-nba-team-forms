@@ -1,4 +1,4 @@
-export class Player {
+export class Player implements IPlayer {
     firstName: string;
     lastName: string;
     number: number;
@@ -10,4 +10,11 @@ export class Player {
         this.number = number;
         this.position = position;
     }
+}
+
+export interface IPlayer {
+  firstName: string;
+  lastName: string;
+  number: number;
+  position: string;
 }
