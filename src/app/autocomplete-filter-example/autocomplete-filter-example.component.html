@@ -1,13 +1,13 @@
 <form class="example-form" [formGroup]="form" (ngSubmit)="submit()">
   <input-autocomplete
     formControlName="pokemon"
-    placeholder="Pokemon's name"
+    placeholder="Parents's name"
     [options]="pokemons$ | async"
   >
   </input-autocomplete>
   <input-autocomplete
     formControlName="swCharacter"
-    placeholder="SW character's name"
+    placeholder="Kids's name"
     lengthToTriggerSearch="2"
     [options]="swCharacters$ | async"
   >

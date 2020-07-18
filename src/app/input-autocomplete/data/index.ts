@@ -11,11 +11,11 @@ export const pokemons: Identifiable[] = [
   },
   {
     id: 1,
-    label: 'Daniel'
+    label: 'Nicky'
   },
   {
     id: 1,
-    label: 'David'
+    label: 'Andy'
   }
 ];
 
@@ -23,11 +23,11 @@ export const pokemons: Identifiable[] = [
 export const swCharacters: Identifiable[] = [
   {
     id: 1,
-    label: 'Dillan'
+    label: 'Leanna'
   },
   {
     id: 1,
-    label: 'Danielle'
+    label: 'Aria'
   },
   {
     id: 1,
