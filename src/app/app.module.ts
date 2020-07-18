@@ -18,6 +18,10 @@ import { PlayersFormComponent } from './ngx-sub-form/players-form/players-form.c
 import { PlayerFormComponent } from './ngx-sub-form/player-form/player-form.component';
 import { MatIconModule } from '@angular/material/icon';
 import { NbaTeamContainerComponent } from './ngx-sub-form/nba-team-container/nba-team-container.component';
+import { InputAutocompleteComponent } from './input-autocomplete/input-autocomplete.component';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatOptionModule } from '@angular/material/core';
+import { AutocompleteFilterExampleComponent } from './autocomplete-filter-example/autocomplete-filter-example.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { NbaTeamContainerComponent } from './ngx-sub-form/nba-team-container/nba
     TeamFormComponent,
     PlayersFormComponent,
     PlayerFormComponent,
-    NbaTeamContainerComponent
+    NbaTeamContainerComponent,
+
+    // Autocomplete reusable component
+    InputAutocompleteComponent,
+    AutocompleteFilterExampleComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +47,8 @@ import { NbaTeamContainerComponent } from './ngx-sub-form/nba-team-container/nba
     AppRoutingModule,
     ReactiveFormsModule,
     MatButtonModule,
+    MatAutocompleteModule,
+    MatOptionModule,
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
